@@ -1,0 +1,46 @@
+.background.container {
+    padding: 1em;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.ui.inverted.center.aligned.header {
+    user-select: none;
+}
+
+.ui.inverted.attached.secondary.menu a {
+    display: block;
+}
+
+.content.container {
+    padding: 1em 0;
+}
+
+.quick.search.container {
+    text-align: center;
+    padding: .5em;
+    line-height: 250%;
+}
+
+.hidden {
+    display: none;
+}
+
+.ui.centered.inline.loader {
+    margin: .5em 0;
+}
+
+.less.opacity {
+    opacity: .5;
+}
+
+.ui.fluid.primary.button {
+    margin: .5em auto;
+}
+
+#forum-post-container textarea {
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+}

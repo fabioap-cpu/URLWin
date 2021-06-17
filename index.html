@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Home | Tech Bench dump (SuperISO)</title>
+        <meta name="description" content="An easy to use website to generate links for Microsoft products.">
+
+        <meta name="og:title" content="Home | Tech Bench dump SuperISO)">
+        <meta name="og:type" content="website">
+        <meta name="og:image" content="/img/opengraph.jpg">
+        <meta name="og:description" content="An easy to use website to generate links for Microsoft products.">
+        <meta name="og:site_name" content="Tech Bench dump SuperISO)">
+
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+        <script src="js/cookie.js"></script>
+        <script src="js/darkmode.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+    </head> 
+    <body>
+        <div id="sidebar" class="ui inverted left vertical menu sidebar"></div>
+        <div class="pusher">
+            <div class="background container">
+                <h1 class="ui inverted center aligned header">Tech Bench dump (SuperISO)</h1>
+                <div class="ui one column grid">
+                    <div id="mobile-tablet-menu" class="ui inverted attached secondary menu mobile tablet only column"></div>
+                    <div id="computer-menu" class="ui inverted attached secondary menu computer only column"></div>
+                </div>
+            </div>
+            <div class="ui content container">
+                <h2 class="ui center aligned header">
+                    <div><i class="fitted home icon"></i> Home</div>
+                </h2>
+                <form action="products.html" class="ui form">
+                    <div class="ui big fluid action input">
+                        <input type="text" placeholder="Search for products..." name="q">
+                        <button class="ui primary button" type="submit"><i class="fitted search icon"></i></button>
+                    </div>
+                </form>
+                <div class="quick search container">
+                    <i class="pin icon"></i>
+                    <a href="products.html?q=Preview" class="ui mini button"><i class="search icon"></i>Insider Preview</a>
+		    <a href="products.html?q=Windows+10*21H1" class="ui mini button"><i class="search icon"></i>Windows 10 21H1</a>
+                    <a href="products.html?q=Windows+10*20H2" class="ui mini button"><i class="search icon"></i>Windows 10 20H2</a>
+                    <a href="products.html?q=Windows+10*2004" class="ui mini button"><i class="search icon"></i>Windows 10 2004</a>
+                    <a href="products.html?q=Windows+10*1909" class="ui mini button"><i class="search icon"></i>Windows 10 1909</a>
+                    <a href="products.html?q=Windows+8.1" class="ui mini button"><i class="search icon"></i>Windows 8.1</a>
+                </div>
+                <h3 class="ui centered header">
+                    <div><i class="fitted star icon"></i> Recently added products</div>
+                </h3>
+                <div id="loader" class="ui active centered inline loader"></div>
+                <div id="error-container" class="ui hidden icon error message">
+                    <i class="times icon"></i>
+                    <div class="content">
+                        <div id="error-header" class="header"></div>
+                        <p id="error-content"></p>
+                    </div>
+                </div>
+                <table id="content-container" class="ui hidden striped fixed celled table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="content"></tbody>
+                </table>
+                <div class="ui divider"></div>
+                <p id="footer"><p>
+            </div>
+        </div>
+        <script src="js/footer.js"></script>
+        <script src="js/header.js"></script>
+        <script src="js/sidebar.js"></script>
+        <script src="js/techbench.js"></script>
+        <script>
+            updateDarkmodeButtonInnerHTML();
+            updateRecentlyAddedProductsTable();
+        </script>
+    </body>
+</html>
